@@ -11,14 +11,15 @@ const Contact = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [responseMessage, setResponseMessage] = useState("");
 
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
     const { id, value } = e.target;
     setFormData((prevData) => ({
       ...prevData,
       [id]: value,
     }));
-  }; 
+  };
   const handleSubmit = (e: { preventDefault: () => void }) => {
     e.preventDefault();
     setIsSubmitting(true);
@@ -73,7 +74,7 @@ const Contact = () => {
                 <div className="ml-4">
                   <p className="text-gray-600">Email</p>
                   <a
-                    href="mailto:navdeep.dhamrait94@gmail.com"
+                    href="mailto:nav_d17@hotmail.com"
                     className="text-lg font-medium hover:text-purple-600"
                   >
                     nav_d17@hotmail.com
@@ -90,7 +91,7 @@ const Contact = () => {
                     href="tel:+1234567890"
                     className="text-lg font-medium hover:text-purple-600"
                   >
-                    647 975 3467
+                    647-975-3467
                   </a>
                 </div>
               </div>
@@ -107,65 +108,67 @@ const Contact = () => {
           </motion.div>
 
           <motion.form
-      initial={{ opacity: 0, x: 20 }}
-      whileInView={{ opacity: 1, x: 0 }}
-      viewport={{ once: true }}
-      className="space-y-6"
-      onSubmit={handleSubmit}
-    >
-      <div>
-        <label htmlFor="name" className="block text-gray-700 mb-2">
-          Name
-        </label>
-        <input
-          type="text"
-          id="name"
-          value={formData.name}
-          onChange={handleChange}
-          className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-purple-500 focus:ring-2 focus:ring-purple-200 outline-none transition-colors"
-          placeholder="Your name"
-          required
-        />
-      </div>
-      <div>
-        <label htmlFor="email" className="block text-gray-700 mb-2">
-          Email
-        </label>
-        <input
-          type="email"
-          id="email"
-          value={formData.email}
-          onChange={handleChange}
-          className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-purple-500 focus:ring-2 focus:ring-purple-200 outline-none transition-colors"
-          placeholder="Your email"
-          required
-        />
-      </div>
-      <div>
-        <label htmlFor="message" className="block text-gray-700 mb-2">
-          Message
-        </label>
-        <textarea
-          id="message"
-          rows={4}
-          value={formData.message}
-          onChange={handleChange}
-          className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-purple-500 focus:ring-2 focus:ring-purple-200 outline-none transition-colors"
-          placeholder="Your message"
-          required
-        ></textarea>
-      </div>
-      <motion.button
-        whileHover={{ scale: 1.05 }}
-        whileTap={{ scale: 0.95 }}
-        type="submit"
-        className="w-full bg-purple-600 text-white py-3 px-6 rounded-lg hover:bg-purple-700 transition-colors"
-        disabled={isSubmitting}
-      >
-        {isSubmitting ? "Sending..." : "Send Message"}
-      </motion.button>
-      {responseMessage && <p className="mt-4 text-center">{responseMessage}</p>}
-    </motion.form>
+            initial={{ opacity: 0, x: 20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            className="space-y-6"
+            onSubmit={handleSubmit}
+          >
+            <div>
+              <label htmlFor="name" className="block text-gray-700 mb-2">
+                Name
+              </label>
+              <input
+                type="text"
+                id="name"
+                value={formData.name}
+                onChange={handleChange}
+                className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-purple-500 focus:ring-2 focus:ring-purple-200 outline-none transition-colors"
+                placeholder="Your name"
+                required
+              />
+            </div>
+            <div>
+              <label htmlFor="email" className="block text-gray-700 mb-2">
+                Email
+              </label>
+              <input
+                type="email"
+                id="email"
+                value={formData.email}
+                onChange={handleChange}
+                className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-purple-500 focus:ring-2 focus:ring-purple-200 outline-none transition-colors"
+                placeholder="Your email"
+                required
+              />
+            </div>
+            <div>
+              <label htmlFor="message" className="block text-gray-700 mb-2">
+                Message
+              </label>
+              <textarea
+                id="message"
+                rows={4}
+                value={formData.message}
+                onChange={handleChange}
+                className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-purple-500 focus:ring-2 focus:ring-purple-200 outline-none transition-colors"
+                placeholder="Your message"
+                required
+              ></textarea>
+            </div>
+            <motion.button
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              type="submit"
+              className="w-full bg-purple-600 text-white py-3 px-6 rounded-lg hover:bg-purple-700 transition-colors"
+              disabled={isSubmitting}
+            >
+              {isSubmitting ? "Sending..." : "Send Message"}
+            </motion.button>
+            {responseMessage && (
+              <p className="mt-4 text-center">{responseMessage}</p>
+            )}
+          </motion.form>
         </div>
       </div>
     </section>

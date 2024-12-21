@@ -16,7 +16,7 @@ const projects = [
     description: 'A cutting-edge AI monitoring and analytics dashboard built with Next.js, TypeScript, Tailwind CSS, and Radix UI to help users track and analyze AI model performance effectively.',
     image: 'https://images.unsplash.com/photo-1507925921958-8a62f3d1a50d?auto=format&fit=crop&w=800&q=80',
     tech: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Radix UI', 'Git'],
-    github: 'https://github.com',
+    github: 'https://github.com/nav-commits/AIDashboard',
     live: 'https://thunderous-tulumba-9f99bf.netlify.app'
   },
   {
