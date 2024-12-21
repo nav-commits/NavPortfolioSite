@@ -8,7 +8,7 @@ const projects = [
     description: 'A modern and responsive car dealership app built with Next.js and TypeScript. It showcases car listings with images, integrates interactive charts for financial insights, and features a functional sidebar for navigation.',
     image: 'https://images.unsplash.com/photo-1557821552-17105176677c?auto=format&fit=crop&w=800&q=80',
     tech: ['Next.js', 'TypeScript', 'HTML5', 'CSS3', 'Git'],
-    github: 'https://github.com',
+    github: 'https://github.com/nav-commits/CarDashboard',
     live: 'https://polite-bublanina-2d779c.netlify.app'
   },
   {
@@ -24,7 +24,7 @@ const projects = [
     description: 'A simple and visually appealing NFT marketplace built with Next.js and TypeScript. Users can browse listed NFTs and add their own. The app integrates MetaMask for wallet authentication and uses modern HTML5 and CSS for styling.',
     image: 'https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?auto=format&fit=crop&w=800&q=80',
     tech: ['Next.js', 'TypeScript', 'CSS3', 'HTML5', 'Git'],
-    github: 'https://github.com',
+    github: 'https://github.com/nav-commits/NFTMarketplace',
     live: 'https://candid-cactus-19d4a1.netlify.app/'
   }
 ];
